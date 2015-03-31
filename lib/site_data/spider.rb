@@ -11,7 +11,10 @@ module Spider
 
     def fetch(url, &block)
       @url = url
-      @page = Mechanize.new.get(@url)
+      mechanize = Mechanize.new
+      mechanize.user_agent_alias = 'Windows Chrome'
+      @page = mechanize.get(@url)
+      
       @properties = {}
 
       self.instance_eval &block
