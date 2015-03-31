@@ -7,7 +7,7 @@ module Spider
 
   module ClassMethods
 
-    attr_accessor :url, :page, :properties, :data_type, :str_type, :target_pattern, :property, :callback
+    attr_accessor :url, :page, :properties, :str_type, :target_pattern, :property, :callback
 
     def fetch(url, &block)
       @url = url
@@ -24,23 +24,16 @@ module Spider
       when :inner_html
         item.inner_html
       when :string
-        item.to_s
+        item.to_s.strip
       else
-        item.text
+        item.text.strip
       end
     end
 
 
     def build
       context = @page.search(@target_pattern)
-      case @data_type
-      when :list
-        context.map { |item| 
-          format_str(item, @str_type) 
-        }
-      else
-        format_str(context, @str_type)
-      end
+      format_str(context, @str_type)
     end
 
 
@@ -48,7 +41,6 @@ module Spider
       @property = method.to_sym
       @target_pattern = args[0]
       @str_type = args[1] || :text
-      @data_type = args[2] || :text
       @callback = block
 
       @properties[property] = build

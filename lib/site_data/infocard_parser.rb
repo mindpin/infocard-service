@@ -4,7 +4,7 @@ class InfocardParser
 
   def self.parse(url)
     # @hostname = request.url
-
+    
     SiteTmall.parse(url)
 
   end
