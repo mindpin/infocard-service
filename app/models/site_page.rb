@@ -1,4 +1,4 @@
-class Infocard
+class SitePage
 
   include Mongoid::Document
   include Mongoid::Timestamps
@@ -14,7 +14,10 @@ class Infocard
   field :author,        type: String
 
 
-  validates_uniqueness_of :url, :case_sensitive => false
+  # validates_uniqueness_of :url, :case_sensitive => false
+
+
+  scope :by_url, ->(url) { where(:url => url) }
 
   
 
