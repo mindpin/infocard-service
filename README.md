@@ -14,3 +14,7 @@
 2. rails s
 3. http://localhost:3000
 4. http://localhost:3000/admin
+
+
+## Deploy
+https://banana-cake-6494.herokuapp.com/
