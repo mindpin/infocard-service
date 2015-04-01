@@ -13,4 +13,4 @@
 1. bundle install
 2. rails s
 3. http://localhost:3000
-4, http://localhost:3000/admin
+4. http://localhost:3000/admin
