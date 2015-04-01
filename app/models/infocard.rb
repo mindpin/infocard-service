@@ -11,6 +11,10 @@ class Infocard
   field :desc,        type: String
   field :price,        type: String
   field :location,        type: String
+  field :author,        type: String
+
+
+  validates_uniqueness_of :url, :case_sensitive => false
 
   
 
