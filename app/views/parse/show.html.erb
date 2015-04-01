@@ -11,7 +11,11 @@
     <th>作者</th>
   </tr>
 
-  <!-- <tr>
-    <td></td>
-  </tr> -->
+  <tr>
+    <td><%= @site_page.image_url || 'N/A' %></td>
+    <td><%= @site_page.title || 'N/A' %></td>
+    <td><%= @site_page.price || 'N/A' %></td>
+    <td><%= @site_page.location || 'N/A' %></td>
+    <td><%= @site_page.author || 'N/A' %></td>
+  </tr>
 </table>

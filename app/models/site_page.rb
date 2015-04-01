@@ -14,7 +14,7 @@ class SitePage
   field :author,        type: String
 
 
-  # validates_uniqueness_of :url, :case_sensitive => false
+  validates_uniqueness_of :url, :case_sensitive => false
 
 
   scope :by_url, ->(url) { where(:url => url) }

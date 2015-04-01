@@ -4,12 +4,12 @@ class SitePageParser
 
   def initialize(url)
     @url = url
-    @homepage = get_homepage(url)
+    url = url.split('#').first
     @hostname = URI.parse(url).host
+    @homepage = get_homepage(url)
+    
 
-    url = url.gsub(/#.*$/, '')
-    domain = URI.parse(url).host
-    domain = domain.gsub('.com', '').gsub('.cn', '')
+    domain = @hostname.gsub('.com', '').gsub('.cn', '')
     name = domain.split('.').last.capitalize
     
     data = eval "Site#{name}.parse(url)"
@@ -25,9 +25,8 @@ class SitePageParser
 
 
   def get_homepage(url)
-    domain = URI.parse(url).host
-    domain_parts = domain.split('.')
-    temp = domain.gsub('.com', '').gsub('.cn', '')
+    domain_parts = @hostname.split('.')
+    temp = @hostname.gsub('.com', '').gsub('.cn', '')
 
     "www.#{temp.split('.').last}.#{domain_parts.last}"
   end
