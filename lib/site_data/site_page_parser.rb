@@ -5,6 +5,7 @@ class SitePageParser
   def initialize(url)
     @url = url
     url = url.split('#').first
+    url = url.gsub('|', '')
     @hostname = URI.parse(url).host
     @homepage = get_homepage(url)
     
