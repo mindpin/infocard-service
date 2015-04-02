@@ -7,7 +7,7 @@ class SiteQuwan
       image_url 'div[@id="wrap"] img', :text do |h|
         h.first['src']
       end
-      price 'div[@id="price_goods_div"] strong'
+      price 'dt[@id="price_goods_div"] strong'
     end
 
   end

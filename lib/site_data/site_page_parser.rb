@@ -14,6 +14,9 @@ class SitePageParser
     
     data = eval "Site#{name}.parse(url)"
 
+    p data
+    p '===='
+
     @image_url = data[:image_url]
     @title = data[:title]
     @desc = data[:desc]
