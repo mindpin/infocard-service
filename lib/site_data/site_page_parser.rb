@@ -13,7 +13,14 @@ class SitePageParser
     domain = @hostname.gsub('.com', '').gsub('.cn', '')
     name = domain.split('.').last.capitalize
     
+    hostname = @hostname.gsub('.', '_')
+    # p hostname
+    # p "#{Rails.root.to_s}/lib/site_data/site_#{hostname}"
+    if File.file?("#{Rails.root.to_s}/lib/site_data/site_#{hostname}.rb")
+      name = hostname.split('_').map { |item| item.capitalize }.join
+    end
     data = eval "Site#{name}.parse(url)"
+    
 
     p data
     p '===='
