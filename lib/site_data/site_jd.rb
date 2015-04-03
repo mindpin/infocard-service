@@ -10,6 +10,7 @@ class SiteJd
       price 'strong[@id="jd-price"]' do |h|
         pid = URI.parse(url).path.gsub("/","").gsub(".html","")
         mechanize = Mechanize.new
+        mechanize.retry_change_requests = true
         price_url = "http://p.3.cn/prices/get?skuid=J_#{pid}&type=1&area=5_142_143&callback=cnp"
         page = mechanize.get(price_url)
         JSON.parse(page.body.gsub(/cnp\((.*)\);/,"\\1"))[0]["p"]

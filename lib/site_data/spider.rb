@@ -12,7 +12,8 @@ module Spider
     def fetch(url, &block)
       @url = url
       mechanize = Mechanize.new
-      mechanize.user_agent_alias = 'Windows Chrome'
+      mechanize.retry_change_requests = true
+      # mechanize.user_agent_alias = 'Windows Chrome'
       @page = mechanize.get(@url)
       
       @properties = {}
