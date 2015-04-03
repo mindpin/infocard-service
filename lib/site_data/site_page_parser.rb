@@ -10,10 +10,8 @@ class SitePageParser
     @homepage = get_homepage(url)
     
 
-    domain = @hostname.gsub('.com', '').gsub('.cn', '')
-    name = domain.split('.').last.capitalize
+    data = eval "Site#{get_name}.parse(url)"
     
-    data = eval "Site#{name}.parse(url)"
 
     p data
     p '===='
@@ -33,6 +31,29 @@ class SitePageParser
     temp = @hostname.gsub('.com', '').gsub('.cn', '')
 
     "www.#{temp.split('.').last}.#{domain_parts.last}"
+  end
+
+
+  def get_name
+    return get_name_from_itunes if @hostname == 'itunes.apple.com'
+
+
+    hostname = @hostname.gsub('.', '_')
+    if File.file?("#{Rails.root.to_s}/lib/site_data/site_#{hostname}.rb")
+       return hostname.split('_').map { |item| item.capitalize }.join
+    end
+
+    @hostname.gsub('.com', '').gsub('.cn', '').split('.').last.capitalize
+  end
+
+
+  def get_name_from_itunes
+    hostname = @hostname.split('.').map { |item| item.capitalize }.join
+
+    return hostname + "Book" if @url.include? '/book/'
+    return hostname + "Podcast" if @url.include? '/podcast/'
+
+    hostname + "Appstore"
   end
 
 end
