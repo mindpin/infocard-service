@@ -8,7 +8,10 @@ class SiteTmall
         h.first['src']
       end
       price 'div[@class="tm-promo-price"]'
-      location 'span[@id="J_deliveryAdd"]'
+      location 'form[@id="J_FrmBid"]', :text do |h|
+        h.at_css('input[@name="region"]').attributes["value"].value
+      end
+
       # price 'dt[@class="tb-metatit"]'
     end
 
