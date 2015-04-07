@@ -36,6 +36,7 @@ class SitePageParser
 
   def get_name
     return get_name_from_itunes if @hostname == 'itunes.apple.com'
+    return get_name_from_vipship if @hostname == 'archive-shop.vip.com'
 
 
     hostname = @hostname.gsub('.', '_')
@@ -54,6 +55,11 @@ class SitePageParser
     return hostname + "Podcast" if @url.include? '/podcast/'
 
     hostname + "Appstore"
+  end
+
+
+  def get_name_from_vipship
+    'VipShop'
   end
 
 end

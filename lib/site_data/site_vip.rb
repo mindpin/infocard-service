@@ -3,11 +3,12 @@ class SiteVip
 
   def self.parse(url)
     fetch(url) do
-      title 'p[@class="pib-title-detail"]'
-      # image_url 'div[@class="show-midpic "] img', :text do |h|
-      #   h.first['src']
-      # end
-      price 'span[@class="pbox-price"]'
+      title 'div[@class="bt_crumbs"] span'
+
+      image_url 'img[@class="bt_good_img"]', :text do |h|
+        h.first['src']
+      end
+      price 'p[@class="bt_infos_price "]'
     end
 
   end
