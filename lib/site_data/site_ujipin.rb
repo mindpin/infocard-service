@@ -4,10 +4,12 @@ class SiteUjipin
   def self.parse(url)
     fetch(url) do
       title 'h4[@class="title"]'
-      image_url 'div[@class="show"] img', :text do |h|
-        h.first['src']
+      image_url 'div[@id="goodsFoucs"] ul a', :text do |h|
+        h.first['href']
       end
-      price 'div[@class="right"] h3'
+      price 'div[@class="right"] h3' do |h|
+        h.text.strip.match(/¥([0-9]*)/)[1]
+      end
     end
 
   end
