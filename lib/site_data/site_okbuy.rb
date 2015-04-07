@@ -14,6 +14,7 @@ class SiteOkbuy
         pid = URI.parse(URI.encode(url)).path.split("/")[-1].match(/-([0-9]*)\.html/)[1]
         mechanize = Mechanize.new
         mechanize.keep_alive = false
+        mechanize.user_agent_alias = 'Windows Chrome'
         price_url = "http://www.okbuy.com/ajax/product/info/#{pid}"
         page = mechanize.get(price_url)
         JSON.parse(page.body)["salepr"]

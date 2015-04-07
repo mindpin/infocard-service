@@ -5,7 +5,7 @@ class SiteGome
     fetch(url) do
       title 'h1[@class="prdtit"]'
       image_url 'div[@class="pic-big"] img', :text do |h|
-        h.first['src']
+        h.first['jqimg']
       end
       price 'span[@id="prdPrice"]'
     end
