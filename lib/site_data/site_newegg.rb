@@ -7,7 +7,9 @@ class SiteNewegg
       image_url 'div[@class="picZoom"] img', :text do |h|
         h.first['src']
       end
-      # price 'span[@class="price-sale"]'
+      price 'input[@id="omHiddenPrice"]' do |h|
+        h.first["value"]
+      end
     end
 
   end
