@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :parse
 
+  get '/api/fetch_infocard' => 'api#fetch_infocard'
 end
