@@ -7,7 +7,9 @@ class SiteYohobuy
       image_url 'img[@id="bigImage"]', :text do |h|
         h.first['src']
       end
-      price 'span[@class="price-sale"]'
+      price 'body' do |b|
+        b.text.match(/custom\['price'\] = (.*);/)[1]
+      end
     end
 
   end
