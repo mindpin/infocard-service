@@ -11,7 +11,7 @@ class SiteYhd
         pid = URI.parse(URI.encode(url)).path.gsub("/item/","")
         mechanize = Mechanize.new
         mechanize.keep_alive = false
-        # mechanize.retry_change_requests = true
+        mechanize.user_agent_alias = 'Windows Chrome'
         price_url = "http://gps.yhd.com/restful/detail?mcsite=1&provinceId=4&pmId=#{pid}&callback=jsonp"
         page = mechanize.get(price_url)
         JSON.parse(page.body.gsub(/jsonp\((.*)\)/,"\\1"))["currentPrice"]

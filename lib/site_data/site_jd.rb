@@ -11,7 +11,7 @@ class SiteJd
         pid = URI.parse(URI.encode(url)).path.gsub("/","").gsub(".html","")
         mechanize = Mechanize.new
         mechanize.keep_alive = false
-        # mechanize.retry_change_requests = true
+        mechanize.user_agent_alias = 'Windows Chrome'
         price_url = "http://p.3.cn/prices/get?skuid=J_#{pid}&type=1&area=5_142_143&callback=cnp"
         page = mechanize.get(price_url)
         JSON.parse(page.body.gsub(/cnp\((.*)\);/,"\\1"))[0]["p"]
