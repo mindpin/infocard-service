@@ -13,7 +13,7 @@ module Spider
       @url = url
       mechanize = Mechanize.new
       mechanize.keep_alive = false
-      # mechanize.user_agent_alias = 'Windows Chrome'
+      mechanize.user_agent_alias = 'Windows Chrome'
       @page = mechanize.get(@url)
       
       @properties = {}
