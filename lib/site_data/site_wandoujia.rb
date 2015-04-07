@@ -8,7 +8,9 @@ class SiteWandoujia
         h.first['src']
       end
 
-      author 'dd[@itemprop="author"] a span'
+      author 'dd[@itemprop="author"] meta[@itemprop="name"]', :text do |h|
+        h.first['content']
+      end
 
     end
 

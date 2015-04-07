@@ -7,9 +7,9 @@ class SiteImdb
       image_url 'td[@id="img_primary"] div[@class="image"] a img', :text do |h|
         h.first['src']
       end
-      # location 'dl[@class="info_l"] dd' do |h|
-      #   h[2].text
-      # end
+      location 'div[@id="titleDetails"] div[@class="txt-block"]' do |h|
+        h[1].text.gsub('Country:', '').strip
+      end
     end
 
   end

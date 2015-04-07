@@ -8,7 +8,9 @@ class SiteMyapp
         h.first['src']
       end
 
-      author 'div[@class="det-othinfo-data"]'
+      author 'div[@class="det-othinfo-data"]', :text do |h|
+        h.last.text.strip
+      end
 
     end
 

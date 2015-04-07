@@ -8,7 +8,7 @@ class SiteMtime
         h.first['src']
       end
       location 'dl[@class="info_l"] dd' do |h|
-        h[2].text
+        h[2].text.gsub('国家地区：', '').strip
       end
     end
 

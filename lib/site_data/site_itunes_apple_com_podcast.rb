@@ -4,8 +4,8 @@ class SiteItunesAppleComPodcast
   def self.parse(url)
     fetch(url) do
       title 'div[@id="title"] h1'
-      image_url 'div[@class="artwork"] img', :text do |h|
-        h.first['src']
+      image_url 'div[@id="left-stack"] meta', :text do |h|
+        h.first['content']
       end
       price 'li span[@class="price"]'
 
