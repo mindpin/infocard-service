@@ -8,7 +8,7 @@ class SiteJd
         h.first['src']
       end
       price 'strong[@id="jd-price"]' do |h|
-        pid = URI.parse(url).path.gsub("/","").gsub(".html","")
+        pid = URI.parse(URI.encode(url)).path.gsub("/","").gsub(".html","")
         mechanize = Mechanize.new
         mechanize.keep_alive = false
         # mechanize.retry_change_requests = true

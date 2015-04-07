@@ -8,7 +8,7 @@ class SiteYhd
         h.first['src']
       end
       price 'span[@class="current_price"]' do |h|
-        pid = URI.parse(url).path.gsub("/item/","")
+        pid = URI.parse(URI.encode(url)).path.gsub("/item/","")
         mechanize = Mechanize.new
         mechanize.keep_alive = false
         # mechanize.retry_change_requests = true
