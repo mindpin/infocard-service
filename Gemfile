@@ -64,10 +64,7 @@ group :production do
   gem 'rails_stdout_logging'
 end
 
-
-
-
-
-
-
-
+gem "unicorn", group: :production
+gem "mina",
+    :git => "git://github.com/mindpin/mina.git",
+    :tag => "v0.2.0fix01"
