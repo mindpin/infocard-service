@@ -7,7 +7,7 @@ class SiteYelp
       image_url 'div[@class="showcase-photo-box"] a img', :text do |h|
         h.first['src']
       end
-      price 'span[@class="business-attribute price-range"]'
+      price 'span[@itemprop="priceRange"]'
       location 'li[@class="address"]'
     end
 
