@@ -4,9 +4,9 @@ class SiteKnewone
   def self.parse(url)
     fetch(url) do
       title 'div[@id="thing_title"] h1'
-      # image_url 'div[@class="slick-track"] img', :text do |h|
-      #   h.first['src']
-      # end
+      image_url 'img[@class="sharing_cover"]', :text do |h|
+        h.first['src']
+      end
       price 'div[@id="price"]'
     end
 
