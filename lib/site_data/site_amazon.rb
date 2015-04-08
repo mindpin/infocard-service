@@ -5,7 +5,7 @@ class SiteAmazon
     fetch(url) do
       title 'span[@id="productTitle"]'
       image_url 'img[@id="landingImage"]', :text do |h|
-        h.first['src']
+        h.first['data-old-hires']
       end
       price 'span[@id="priceblock_ourprice"]'
     end
