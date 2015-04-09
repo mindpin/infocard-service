@@ -4,7 +4,7 @@ class SiteMuji
   def self.parse(url)
     fetch(url) do
       title 'h1[@id="goodsNmArea"]'
-      image_url 'meta[@property="og:image"]', :text do |h|
+      image_url 'meta[@property="og:image"]' do |h|
         h.first['content']
       end
       price 'script' do |h|

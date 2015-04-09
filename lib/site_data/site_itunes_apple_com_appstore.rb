@@ -4,7 +4,7 @@ class SiteItunesAppleComAppstore
   def self.parse(url)
     fetch(url) do
       title 'h1[@itemprop="name"]'
-      image_url 'div[@id="left-stack"] meta', :text do |h|
+      image_url 'div[@id="left-stack"] meta' do |h|
         h.first['content']
       end
       price 'div[@class="price"]'

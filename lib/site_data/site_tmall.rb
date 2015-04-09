@@ -4,15 +4,15 @@ class SiteTmall
   def self.parse(url)
     fetch(url) do
       title 'div[@class="tb-detail-hd"] h1'
-      image_url 'img[@id="J_ImgBooth"]', :text do |h|
+      image_url 'img[@id="J_ImgBooth"]' do |h|
         h.first['src']
       end
       price 'div[@class="tm-promo-price"]'
-      location 'form[@id="J_FrmBid"]', :text do |h|
+      location 'form[@id="J_FrmBid"]' do |h|
         h.at_css('input[@name="region"]').attributes["value"].value
       end
 
-      price 'body' do |body|
+      price do |body|
         pid = URI.parse(URI.encode(url)).query.split("&").select do |str|
           str.match(/id=.*/)
         end[0].gsub("id=","")

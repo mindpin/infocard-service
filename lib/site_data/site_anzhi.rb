@@ -4,7 +4,7 @@ class SiteAnzhi
   def self.parse(url)
     fetch(url) do
       title 'div[@class="detail_line"] h3'
-      image_url 'div[@class="detail_icon"] img', :text do |h|
+      image_url 'div[@class="detail_icon"] img' do |h|
         "http://www.anzhi.com" + h.first['src']
       end
 

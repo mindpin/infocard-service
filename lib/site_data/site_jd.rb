@@ -4,10 +4,10 @@ class SiteJd
   def self.parse(url)
     fetch(url) do
       title 'div[@id="name"] h1'
-      image_url 'div[@id="preview"] img', :text do |h|
+      image_url 'div[@id="preview"] img' do |h|
         h.first['src']
       end
-      price 'strong[@id="jd-price"]' do |h|
+      price do |h|
         pid = URI.parse(URI.encode(url)).path.gsub("/","").gsub(".html","")
         mechanize = Mechanize.new
         mechanize.keep_alive = false

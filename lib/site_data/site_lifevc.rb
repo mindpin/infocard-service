@@ -6,7 +6,7 @@ class SiteLifevc
       title 'p[@class="sName"]' do |pname|
         pname.first.text.strip
       end
-      image_url 'img[@class="j_previewimg"]', :text do |h|
+      image_url 'img[@class="j_previewimg"]' do |h|
         h.first['lzyimg']
       end
       price 'p span[@class="salePrice"] em' do |em|

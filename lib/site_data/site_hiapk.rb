@@ -4,7 +4,7 @@ class SiteHiapk
   def self.parse(url)
     fetch(url) do
       title 'div[@id="appSoftName"]'
-      image_url 'div[@class="detail_content"] div[@class="left"] img', :text do |h|
+      image_url 'div[@class="detail_content"] div[@class="left"] img' do |h|
         h.first['src']
       end
 

@@ -4,7 +4,7 @@ class SiteUjipin
   def self.parse(url)
     fetch(url) do
       title 'h4[@class="title"]'
-      image_url 'div[@id="goodsFoucs"] ul a', :text do |h|
+      image_url 'div[@id="goodsFoucs"] ul a' do |h|
         h.first['href']
       end
       price 'div[@class="right"] h3' do |h|

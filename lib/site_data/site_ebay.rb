@@ -6,7 +6,7 @@ class SiteEbay
       title 'h1[@id="itemTitle"]' do |h|
         h.text.gsub('Details about', '').strip
       end
-      image_url 'div[@id="mainImgHldr"] img', :text do |h|
+      image_url 'div[@id="mainImgHldr"] img' do |h|
         h[1]['src']
       end
       price 'span[@id="prcIsum"]'

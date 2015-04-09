@@ -4,7 +4,7 @@ class SiteAppchina
   def self.parse(url)
     fetch(url) do
       title 'h1[@class="app-name"]'
-      image_url 'div[@class="msg"] img', :text do |h|
+      image_url 'div[@class="msg"] img' do |h|
         h.first['src']
       end
 

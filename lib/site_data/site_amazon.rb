@@ -4,7 +4,7 @@ class SiteAmazon
   def self.parse(url)
     fetch(url) do
       title 'span[@id="productTitle"]'
-      image_url 'img[@id="landingImage"]', :text do |h|
+      image_url 'img[@id="landingImage"]' do |h|
         h.first['data-old-hires']
       end
       price 'span[@id="priceblock_ourprice"]'

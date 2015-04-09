@@ -4,7 +4,7 @@ class SiteMtime
   def self.parse(url)
     fetch(url) do
       title 'div[@class="db_head"] h1'
-      image_url 'div[@class="db_cover __r_c_"] a img', :text do |h|
+      image_url 'div[@class="db_cover __r_c_"] a img' do |h|
         h.first['src']
       end
       location 'dl[@class="info_l"] dd' do |h|

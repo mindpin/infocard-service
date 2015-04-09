@@ -4,10 +4,10 @@ class SiteYhd
   def self.parse(url)
     fetch(url) do
       title 'h1[@id="productMainName"]'
-      image_url 'img[@id="J_prodImg"]', :text do |h|
+      image_url 'img[@id="J_prodImg"]' do |h|
         h.first['src']
       end
-      price 'span[@class="current_price"]' do |h|
+      price do |h|
         pid = URI.parse(URI.encode(url)).path.gsub("/item/","")
         mechanize = Mechanize.new
         mechanize.keep_alive = false

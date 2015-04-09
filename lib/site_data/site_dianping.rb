@@ -6,7 +6,7 @@ class SiteDianping
       title 'h1[@class="shop-name"]' do |h|
         h.text.gsub('添加分店', '').strip
       end
-      image_url 'div[@class="photos"] a img', :text do |h|
+      image_url 'div[@class="photos"] a img' do |h|
         h.first['src']
       end
       price 'div[@class="brief-info"] span[@class="item"]' do |h|

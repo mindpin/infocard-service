@@ -4,7 +4,7 @@ class SiteIkea
   def self.parse(url)
     fetch(url) do
       title 'div[@id="name"]'
-      image_url 'img[@id="productImg"]', :text do |h|
+      image_url 'img[@id="productImg"]' do |h|
         URI.parse(url).host + "/" + h.first['src']
       end
       price 'span[@id="price1"]'

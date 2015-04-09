@@ -4,10 +4,10 @@ class SiteOkbuy
   def self.parse(url)
     fetch(url) do
       title 'h1[@class="prodAllName"]'
-      image_url 'p[@class="pBigPic"] img', :text do |h|
+      image_url 'p[@class="pBigPic"] img' do |h|
         h.first['src']
       end
-      price 'span[@id="prodPriceAj"]' do |h|
+      price do |h|
         # http://www.okbuy.com/p-nike/detail-clothes-17080471.html
         # http://www.okbuy.com/p-converse/detail-shoe-17062168.html
         # http://www.okbuy.com/p-lining/detail-clothes-17188394.html

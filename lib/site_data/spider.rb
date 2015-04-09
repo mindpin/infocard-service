@@ -43,8 +43,10 @@ module Spider
 
     def method_missing method, *args, &block
       @property = method.to_sym
-      @target_pattern = args[0]
-      @str_type = args[1] || :text
+      if args.length > 0
+        @target_pattern = args[0] || @page.body
+        @str_type = args[1] || :text
+      end
       @callback = block
 
       @properties[property] = build

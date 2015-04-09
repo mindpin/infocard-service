@@ -4,7 +4,7 @@ class SiteGfan
   def self.parse(url)
     fetch(url) do
       title 'h4[@class="curr-tit"]'
-      image_url 'div[@class="descr-left"] img', :text do |h|
+      image_url 'div[@class="descr-left"] img' do |h|
         h.first['src']
       end
 

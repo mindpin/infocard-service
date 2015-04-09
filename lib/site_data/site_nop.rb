@@ -4,7 +4,7 @@ class SiteNop
   def self.parse(url)
     fetch(url) do
       title 'div[@id="good-view"] h1'
-      image_url 'ul[@class="slides"] li img', :text do |h|
+      image_url 'ul[@class="slides"] li img' do |h|
         h.first['src']
       end
       price 'span[@class="pdpricecur"] span'
