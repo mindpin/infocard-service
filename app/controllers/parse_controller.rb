@@ -1,6 +1,8 @@
 class ParseController < ApplicationController
 
   def index
+    file = Rails.root.to_s + "/config/sites.yml"
+    @data = YAML.load(File.open(file))
     
   end
 

@@ -25,7 +25,14 @@
 
     <td width="40%">
 
-
+<% @data.each do |item| %>
+  <p>
+    <a href="<%= item['site'] %>" target="_blank"><%= item['name'] %></a> <br />
+    <a href="<%= item['md'] %>" target="_blank"><%= item['md'] %></a> <br />
+    <a href="<%= item['url'] %>" target="_blank"><%= item['url'] %></a>
+  </p>
+<% end %>
+<!-- 
 <p>
   天猫：http://markdown.4ye.me/z1ei2y6c 
   <br />
@@ -145,7 +152,7 @@ iTunes Store - 图书（中国）:http://markdown.4ye.me/bj8ypybt
 豆瓣移动应用：http://markdown.4ye.me/nTMTIgDS
 
 
-</p>
+</p> -->
 
 </td>
 
