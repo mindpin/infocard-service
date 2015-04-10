@@ -1,2 +1,16 @@
+<div class="left">
+  <%= render 'parse/post_url' %>
 
-<%= render 'parse/post_url' %>
+  <%= render 'parse/result' %>
+</div>
+
+<div class="right">
+  <% @data.each do |item| %>
+    <p>
+      <a href="<%= item['site'] %>" target="_blank"><%= item['name'] %></a> <br />
+      <a href="<%= item['md'] %>" target="_blank"><%= item['md'] %></a> <br />
+      <a href="<%= item['url'] %>" target="_blank"><%= item['url'] %></a>
+    </p>
+  <% end %>
+
+</div>

@@ -1,0 +1,2 @@
+.left{position:fixed;top:0;left:0;bottom:0;width:50%}
+.right{position:fixed;top:0;right:0;bottom:0;width:50%;overflow:auto;}
