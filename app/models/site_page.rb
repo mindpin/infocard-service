@@ -73,7 +73,7 @@ class SitePage
   def api_hash
     if self.status == SitePage::Status::PARSED
       return {
-        :status => 'support',
+        :status => SitePage::Status::PARSED,
         :data => {
           url: self.url,
           hostname: self.hostname,
@@ -90,7 +90,7 @@ class SitePage
 
 
     {
-      :status => 'common',
+      :status => SitePage::Status::SEO,
       :data => {
         url: self.url,
         hostname: self.hostname,

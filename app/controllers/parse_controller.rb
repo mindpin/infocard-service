@@ -13,6 +13,9 @@ class ParseController < ApplicationController
 
   def create
     site_page = SitePage.parse_url(params[:url])
+    if site_page.title.nil?
+      flash[:error] = '无法解析'
+    end
     redirect_to "/parse/#{site_page.id}"
   rescue Exception => e
     flash[:error] = e.message

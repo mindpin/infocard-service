@@ -9,7 +9,16 @@ class ApiController < ApplicationController
 
   def fetch_infocard
     site_page = SitePage.parse_url(URI.encode(params[:url]))
-    render :status => 200, :json => site_page.api_hash
+
+    p site_page
+    p '---'
+
+    if site_page.title
+      render :status => 200, :json => site_page.api_hash
+    else
+      render :status => 500, :json => {:status => 'error'}
+    end
+    
 
     rescue Exception => e
       render :status => 500, :json => {:status => 'error'}
