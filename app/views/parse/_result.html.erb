@@ -1,0 +1,29 @@
+
+<% if @site_page %>
+<table border="1">
+  <tr>
+    <th>图片</th>
+    <th>名称</th>
+    <th>价格</th>
+    <th>地理位置</th>
+    <th>作者</th>
+  </tr>
+
+  <tr>
+    <td>
+      <%= @site_page.image_url || 'N/A' %>
+      <p style="width: 200px; overflow: hidden;">
+        <a href="<%= @site_page.image_url %>" target="_blank">
+          <img src="<%= @site_page.image_url %>" width="200px;" />
+        </a>
+      </p>
+    </td>
+    <td><%= @site_page.title || 'N/A' %></td>
+    <td><%= @site_page.price || 'N/A' %></td>
+    <td><%= @site_page.location || 'N/A' %></td>
+    <td><%= @site_page.author || 'N/A' %></td>
+  </tr>
+</table>
+<% else %>
+<p></p>
+<% end %>
