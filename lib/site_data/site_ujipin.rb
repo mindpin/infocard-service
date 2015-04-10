@@ -7,8 +7,11 @@ class SiteUjipin
       image_url 'div[@id="goodsFoucs"] ul a' do |h|
         h.first['href']
       end
+      # price 'div[@class="right"] h3' do |h|
+      #   h.text.strip.match(/¥([0-9]*)/)[1]
+      # end
       price 'div[@class="right"] h3' do |h|
-        h.text.strip.match(/¥([0-9]*)/)[1]
+        h.text.gsub('售价：', '').strip
       end
     end
 

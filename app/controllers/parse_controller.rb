@@ -1,8 +1,13 @@
 class ParseController < ApplicationController
+  before_filter :pre_load
 
-  def index
+  def pre_load
     file = Rails.root.to_s + "/config/sites.yml"
     @data = YAML.load(File.open(file))
+  end
+
+  def index
+    
     
   end
 

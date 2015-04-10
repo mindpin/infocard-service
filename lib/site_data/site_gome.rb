@@ -7,7 +7,9 @@ class SiteGome
       image_url 'div[@class="pic-big"] img' do |h|
         h.first['jqimg']
       end
-      price 'span[@id="prdPrice"]'
+      price 'script' do |h|
+        h.to_s.split('price:"')[1].split('",')[0]
+      end
     end
 
   end
