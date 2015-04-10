@@ -9,8 +9,12 @@ class SiteLifevc
       image_url 'img[@class="j_previewimg"]' do |h|
         h.first['lzyimg']
       end
-      price 'p span[@class="salePrice"] em' do |em|
-        em.first.text.strip
+      # price 'p span[@class="salePrice"] em' do |em|
+      #   em.first.text.strip
+      # end
+
+      price 'p[@class="sPrice"] em' do |h|
+        h.first.text.strip
       end
     end
 
