@@ -3,9 +3,9 @@ require 'mina/rails'
 require 'mina/git'
 
 set :domain, '106.186.119.248'
-set :deploy_to, '/web/infocard-service'
+set :deploy_to, '/web/urlinfo-service'
 set :current_path, 'current'
-set :repository, 'git://github.com/mindpin/infocard-service.git'
+set :repository, 'git://github.com/mindpin/urlinfo-service.git'
 set :branch, 'master'
 set :user, 'root'
 
