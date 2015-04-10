@@ -9,8 +9,9 @@ class SitePageParser
     @hostname = URI.parse(URI.encode(url)).host
     @homepage = get_homepage(url)
     
-
-    data = eval "Site#{get_name}.parse(url)"
+    name = get_name
+    return unless name
+    data = eval "Site#{name}.parse(url)"
     
 
     p data
@@ -44,7 +45,9 @@ class SitePageParser
        return hostname.split('_').map { |item| item.capitalize }.join
     end
 
-    @hostname.gsub('.com', '').gsub('.cn', '').split('.').last.capitalize
+    name = @hostname.gsub('.com', '').gsub('.cn', '').split('.').last
+    return  name.capitalize if File.file?("#{Rails.root.to_s}/lib/site_data/site_#{name}.rb")
+    nil
   end
 
 
