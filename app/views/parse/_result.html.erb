@@ -10,13 +10,13 @@
   </tr>
 
   <tr>
-    <td style="max-size: 300px;">
+    <td>
       <div>
         <%= @site_page.image_url || 'N/A' %>
       </div>
       <p>
         <a href="<%= @site_page.image_url %>" target="_blank">
-          <img src="<%= @site_page.image_url %>"  />
+          <img src="<%= @site_page.image_url %>" style="max-width: 300px;"  />
         </a>
       </p>
     </td>

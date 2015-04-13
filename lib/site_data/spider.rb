@@ -1,4 +1,5 @@
 require 'mechanize'
+require 'open-uri'
 
 module Spider
   def self.included(base)

@@ -349,4 +349,12 @@
 
 
 
+- name: 淘宝
+  md: "http://www.taobao.com/"
+  site: "http://www.taobao.com/"
+  url: "http://item.taobao.com/item.htm?spm=a219r.lm5179.0.0.yViRpx&id=43782883043&ns=1&abbucket=17"
+
+
+
+
 
