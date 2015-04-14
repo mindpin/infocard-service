@@ -1,0 +1,6 @@
+= form_tag("/parse", :id => 'parse-form', method: "post") do
+  .fields
+    %textarea.form-control{:placeholder => "请输入网页地址", :name => 'url', :rows => "5"}
+  .submits
+    %a.do-submit.btn.btn-pill.btn-flat-success{:href => "javascript:;"}
+      %span 尝试分析

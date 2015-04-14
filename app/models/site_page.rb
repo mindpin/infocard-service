@@ -33,6 +33,8 @@ class SitePage
     return site_page if site_page
 
     parser = SitePageParser.new(url)
+    # p parser
+    # p '==='
     SitePage.create(
       :url => parser.url,
       :hostname => parser.hostname,

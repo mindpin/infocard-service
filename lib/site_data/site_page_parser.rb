@@ -10,7 +10,7 @@ class SitePageParser
     @homepage = get_homepage(url)
     
     name = get_name
-    return unless name
+    # return unless name
     data = eval "Site#{name}.parse(url)"
     
 

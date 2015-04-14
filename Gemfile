@@ -46,6 +46,7 @@ gem 'mechanize'
 gem 'mongoid', '~> 4.0.0'
 gem 'iconv'
 gem 'rails_admin'
+gem 'haml'
 
 
 

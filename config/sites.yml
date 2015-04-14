@@ -3,11 +3,13 @@
   md: "http://markdown.4ye.me/z1ei2y6c"
   site: "http://www.tmall.com/"
   url: "http://detail.tmall.com/item.htm?id=15593325475&spm=a1z0k.7385961.1997985097.d4918997.lTDqPh&_u=rkkbfj13db&mt="
+  intro: "通过解析网页HTML进行支持, 价格通过另一链接获取  http://mdskip.taobao.com/core/initItemDetail.htm?itemId=#{pid} , 天猫多种情况实例 http://markdown.4ye.me/rRYAVhDb"
 
 - name: 京东
   md: "http://markdown.4ye.me/klxVBaYz"
   site: "http://www.jd.com/"
   url: "http://item.jd.com/1082403.html"
+  intro: "通过解析网页HTML进行支持, 价格通过另一链接获取 http://p.3.cn/prices/get?skuid=J_#{pid}&type=1&area=5_142_143&callback=cnp"
 
 
 
@@ -15,19 +17,21 @@
   md: "http://markdown.4ye.me/dwpFM336"
   site: "http://www.amazon.cn/"
   url: "http://www.amazon.cn/gp/product/B007ZY5GV2/ref=s9_simh_gw_p79_d14_i2_gs9w?pf_rd_m=A1AJ19PSB66TGU&pf_rd_s=center-2&pf_rd_r=0072J7PVAHGXQ2KXBTNA&pf_rd_t=101&pf_rd_p=248108232&pf_rd_i=899254051"
-
+  intro: "通过解析网页HTML进行支持"
 
 
 - name: 凡客
   md: "http://markdown.4ye.me/KAGHbgz2"
   site: "http://www.vancl.com/"
   url: "http://item.vancl.com/1684304.html#ref=zt_zhenzhiku-9229-0-0-v|hp-hp-1-r_4-v:n"
+  intro: "通过解析网页HTML进行支持"
 
 
 - name: 当当
   md: "http://markdown.4ye.me/Sh5kEhfY"
   site: "http://www.dangdang.com/"
   url: "http://product.dangdang.com/22788959.html#ddclick_reco_book"
+  intro: "通过解析网页HTML进行支持"
 
 
 
@@ -35,6 +39,7 @@
   md: "http://markdown.4ye.me/unEbYpEy"
   site: "http://www.yhd.com/"
   url: "http://item.yhd.com/item/1884193?tp=2025.0.983.0.8.KlQWfFA-10-D5lua"
+  intro: "通过解析网页HTML进行支持， 价格通过另一链接获取 http://gps.yhd.com/restful/detail?mcsite=1&provinceId=4&pmId=#{pid}&callback=jsonp"
 
 
 
@@ -42,6 +47,7 @@
   md: "http://markdown.4ye.me/k2CAyyJI"
   site: "http://www.aliceinmod.com/"
   url: "http://www.aliceinmod.com/?product-5621.html"
+  intro: "通过解析网页HTML进行支持"
 
 
 
@@ -50,12 +56,14 @@
   md: "http://markdown.4ye.me/GTH2qw0w"
   site: "http://www.yixun.com/"
   url: "http://item.yixun.com/item-1918368.html?YTAG=1.100031206&cp-ptss=1815-3-1918368"
+  intro: "通过解析网页HTML进行支持"
 
 
 - name: 宜家
   md: "http://markdown.4ye.me/aPckCMRZ"
   site: "http://www.ikea.com/cn/zh/"
   url: "http://www.ikea.com/cn/zh/catalog/products/40281630/"
+  intro: "通过解析网页HTML进行支持"
 
 
 
@@ -63,6 +71,7 @@
   md: "http://markdown.4ye.me/DIT6WpP3"
   site: "http://www.quwan.com/"
   url: "http://www.quwan.com/goods_2013-42938.html?FM=lastlike"
+  intro: "通过解析网页HTML进行支持"
 
 
 
@@ -71,6 +80,7 @@
   md: "http://markdown.4ye.me/VxrScW1o"
   site: "http://www.okbuy.com/"
   url: "http://www.okbuy.com/p-anta/detail-shoe-17116591.html"
+  intro: "通过解析网页HTML进行支持, 价格通过另一页面获取 http://www.okbuy.com/ajax/product/info/#{pid}"
 
 
 
@@ -80,6 +90,7 @@
   md: "http://markdown.4ye.me/ulxcoBmm"
   site: "http://www.brandnewchina.cn/"
   url: "http://www.brandnewchina.cn/getProduct.htm?productid=18722&color=RED"
+  intro: "通过解析网页HTML进行支持"
 
 
 
@@ -89,12 +100,14 @@
   md: "http://markdown.4ye.me/qk1BET4J"
   site: "http://www.nop.cn/"
   url: "http://www.nop.cn/product-2737.html"
+  intro: "通过解析网页HTML进行支持"
 
 
 - name: 优集品
   md: "http://markdown.4ye.me/qpzmysKR"
   site: "http://www.ujipin.com/"
   url: "http://www.ujipin.com/g-i15937.html?track=home-time-p2"
+  intro: "通过解析网页HTML进行支持"
 
 
 
@@ -103,12 +116,14 @@
   md: "http://markdown.4ye.me/r9Nq88R0"
   site: "http://www.gome.com.cn/"
   url: "http://www.gome.com.cn/product/9133498332.html"
+  intro: "通过解析网页HTML进行支持"
 
 
 - name: 丽芙家居
   md: "http://markdown.4ye.me/HZA1hrIy"
   site: "http://www.lifevc.com/"
   url: "http://www.lifevc.com/item/11875#ref_src=gssv"
+  intro: "通过解析网页HTML进行支持"
 
 
 
@@ -117,6 +132,8 @@
   md: "http://markdown.4ye.me/hREmA1RY"
   site: "http://www.muji.com.cn/"
   url: "http://www.muji.com.cn/cn/store/goods/4548076448341"
+  intro: "通过解析网页HTML进行支持， 价格通过解析页面上的 script json 获取"
+
 
 
 
@@ -125,6 +142,7 @@
   md: "http://markdown.4ye.me/r25NsdRV"
   site: "http://www.yohobuy.com/"
   url: "http://item.yohobuy.com/product/pro_40359_62325/HeiTouYuMaoXiangLian.html"
+  intro: "通过解析网页HTML进行支持"
 
 
 
@@ -132,6 +150,7 @@
 - name: 新蛋中国
   site: "http://www.newegg.cn/"
   url: "http://www.newegg.cn/Product/A6D-2VX-05H.htm?neg_sp=Home-_-A6D-2VX-05H-_-YouLike"
+  intro: "通过解析网页HTML进行支持"
 
 
 
@@ -141,6 +160,7 @@
   md: "http://markdown.4ye.me/rEtHAkVb"
   site: "http://www.loccitane.cn/"
   url: "http://www.loccitane.cn/cherry-blossom-solid-perfume,90,2,34817,309403.htm#s=34818"
+  intro: "通过解析网页HTML进行支持"
 
 
 
@@ -148,6 +168,7 @@
   md: "http://markdown.4ye.me/DjHDln4B"
   site: "http://www.itruelife.com/"
   url: "http://www.itruelife.com/product/300101003.html"
+  intro: "通过解析网页HTML进行支持"
 
 
 
@@ -156,6 +177,7 @@
   md: "http://markdown.4ye.me/BXdMdSDM"
   site: "http://www.lancome.com.cn/lancome/_zh/_cn/index.aspx"
   url: "http://www.lancome.com.cn/lancome/_zh/_cn/lancome/skincare/the-essence-of/genifique-ls00081.aspx"
+  intro: "通过解析网页HTML进行支持"
 
 
 
@@ -163,6 +185,7 @@
   md: "http://markdown.4ye.me/se6Q3xiC"
   site: "https://knewone.com/"
   url: "https://knewone.com/things/vojo-neng-liang-cha-tou"
+  intro: "通过解析网页HTML进行支持"
 
 
 
@@ -170,6 +193,7 @@
   md: "http://markdown.4ye.me/ftK8jAFA"
   site: "http://www.larocheposay.com.cn/"
   url: "http://www.larocheposay.com.cn/store/chanpinxilie/shuhuanpenwu/lifuquanshuhuanpenwu300ml.html"
+  intro: "通过解析网页HTML进行支持"
 
 
 
@@ -177,6 +201,7 @@
   md: "http://markdown.4ye.me/yhsMxRN8"
   site: "http://www.iliangcang.com/"
   url: "http://www.iliangcang.com/i/goods/?id=34752"
+  intro: "通过解析网页HTML进行支持"
 
 
 
@@ -185,6 +210,7 @@
   md: "http://markdown.4ye.me/WUY5QNGR"
   site: "http://www.vip.com/"
   url: "http://www.vip.com/detail-383475-50536007.html?f=0|0|0|1"
+  intro: "通过解析网页HTML进行支持"
 
 
 
@@ -192,6 +218,7 @@
   md: "http://markdown.4ye.me/ki2wsCb5"
   site: "http://www.amazon.com/"
   url: "http://www.amazon.com/gp/product/B00P1SYWLY/ref=s9_pop_gw_g121_i5?pf_rd_m=ATVPDKIKX0DER&pf_rd_s=desktop-2&pf_rd_r=1A1GZDJ2R6ZMMT9KTNJX&pf_rd_t=36701&pf_rd_p=1970555362&pf_rd_i=desktop"
+  intro: "通过解析网页HTML进行支持"
 
 
 
@@ -200,6 +227,7 @@
   md: "http://markdown.4ye.me/R16G5TOK"
   site: "http://www.fab.com/"
   url: "http://fab.com/product/virgo-necklace-turquoise-493741/?pref[]=designer%7Ccarla-de-la-cruz-jewelry&ref=designer&pos=3"
+  intro: "通过解析网页HTML进行支持"
 
 
 
@@ -208,6 +236,7 @@
   md: "http://markdown.4ye.me/JaPk6BFD"
   site: "http://www.ebay.com/"
   url: "http://www.ebay.com/itm/Radio-Flow-Lexon-Bleu-/251634701185?&_trksid=p2056016.l4276"
+  intro: "通过解析网页HTML进行支持"
 
 
 
@@ -217,6 +246,7 @@
   md: "http://markdown.4ye.me/j2Oi9SJu"
   site: "http://www.dianping.com/"
   url: "http://www.dianping.com/shop/15861615"
+  intro: "通过解析网页HTML进行支持"
 
 
 
@@ -226,12 +256,14 @@
   md: "http://markdown.4ye.me/FFXUhy7T"
   site: "http://www.yelp.com/"
   url: "http://www.yelp.com/biz/sous-beurre-kitchen-san-francisco-2"
+  intro: "通过解析网页HTML进行支持"
 
 
 - name: 豆瓣阅读
   md: "http://markdown.4ye.me/oJTtqI27"
   site: "http://read.douban.com/"
   url: "http://read.douban.com/ebook/8305815/?icn=index-gallery"
+  intro: "通过解析网页HTML进行支持"
 
 
 
@@ -239,6 +271,7 @@
   md: "http://markdown.4ye.me/pLVEXcqQ"
   site: "http://book.douban.com"
   url: "http://book.douban.com/subject/25862578/"
+  intro: "通过API获取"
 
 
 
@@ -247,6 +280,7 @@
   md: "http://markdown.4ye.me/ZisezjfX"
   site: "http://www.duokan.com/"
   url: "http://www.duokan.com/book/42790"
+  intro: "通过解析网页HTML进行支持"
 
 
 
@@ -255,6 +289,7 @@
   md: "http://markdown.4ye.me/IS0XuIU0"
   site: "http://movie.douban.com/"
   url: "http://movie.douban.com/subject/6875263/"
+  intro: "通过API获取"
 
 
 
@@ -263,6 +298,7 @@
   md: "http://markdown.4ye.me/UfsKAK9l/1"
   site: "http://www.mtime.com/"
   url: "http://movie.mtime.com/204906/"
+  intro: "通过解析网页HTML进行支持"
 
 
 
@@ -271,6 +307,7 @@
   md: "http://markdown.4ye.me/zEQpwdb2/1"
   site: "http://www.imdb.com/"
   url: "http://www.imdb.com/title/tt1661199/?ref_=rvi_tt"
+  intro: "通过解析网页HTML进行支持"
 
 
 
@@ -279,6 +316,7 @@
   md: "http://markdown.4ye.me/Pd7XyOXR"
   site: "http://apk.hiapk.com/"
   url: "http://apk.hiapk.com/appinfo/com.tencent.mm"
+  intro: "通过解析网页HTML进行支持"
 
 
 
@@ -287,6 +325,7 @@
   md: "http://markdown.4ye.me/PdvGHJJl"
   site: "http://www.anzhi.com/"
   url: "http://www.anzhi.com/soft_2122818.html"
+  intro: "通过解析网页HTML进行支持"
 
 
 
@@ -294,6 +333,7 @@
   md: "http://markdown.4ye.me/Gg7tXH8a"
   site: "http://www.appchina.com/"
   url: "http://www.appchina.com/app/com.linekong.cjad.yyh"
+  intro: "通过解析网页HTML进行支持"
 
 
 
@@ -301,6 +341,7 @@
   md: "http://markdown.4ye.me/RpFBYjsI"
   site: "http://www.wandoujia.com/"
   url: "http://www.wandoujia.com/apps/com.gewara"
+  intro: "通过解析网页HTML进行支持"
 
 
 
@@ -308,6 +349,7 @@
   md: "http://markdown.4ye.me/ek8OrGkq"
   site: "http://apk.gfan.com/"
   url: "http://apk.gfan.com/Product/App721206.html"
+  intro: "通过解析网页HTML进行支持"
 
 
 
@@ -315,6 +357,7 @@
   md: "http://markdown.4ye.me/IFWsnVr0"
   site: "http://android.myapp.com/"
   url: "http://android.myapp.com/myapp/detail.htm?apkName=com.vanchu.apps.guimiquan"
+  intro: "通过解析网页HTML进行支持"
 
 
 
@@ -322,6 +365,7 @@
   md: "http://markdown.4ye.me/CGPT4gZM"
   site: "http://itunes.apple.com/cn/genre/ios/id36?mt=8"
   url: "https://itunes.apple.com/cn/app/bad-piggies/id533451786?mt=8"
+  intro: "通过解析网页HTML进行支持"
 
 
 
@@ -329,6 +373,7 @@
   md: "http://markdown.4ye.me/vCVWLVuJ"
   site: "https://itunes.apple.com/cn/genre/bo-ke/id26?mt=2"
   url: "https://itunes.apple.com/cn/podcast/wei-zhi-tian-xia/id398155040?mt=2"
+  intro: "通过解析网页HTML进行支持"
 
 
 
@@ -338,6 +383,7 @@
   md: "http://markdown.4ye.me/bj8ypybt"
   site: "https://itunes.apple.com/cn/genre/tu-shu/id38?mt=11"
   url: "https://itunes.apple.com/cn/book/xi-xiang-ji/id894592940?mt=11"
+  intro: "通过解析网页HTML进行支持"
 
 
 
@@ -346,6 +392,7 @@
   md: "http://markdown.4ye.me/nTMTIgDS"
   site: "http://www.douban.com/"
   url: "http://www.douban.com/subject/25890156/"
+  intro: "通过解析网页HTML进行支持"
 
 
 
@@ -353,6 +400,7 @@
   md: "http://www.taobao.com/"
   site: "http://www.taobao.com/"
   url: "http://item.taobao.com/item.htm?spm=a219r.lm5179.0.0.yViRpx&id=43782883043&ns=1&abbucket=17"
+  intro: "通过解析网页HTML进行支持"
 
 
 

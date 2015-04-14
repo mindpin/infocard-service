@@ -1,0 +1,27 @@
+.result{:style => 'display:block;'}
+  .image
+    %a{:href => @site_page.image_url, :target => '_blank'}
+      %img{:src => @site_page.image_url}
+  .data
+    .item
+      .k 图片网址： 
+      .v= @site_page.image_url || 'N/A'
+    .item
+      .k 名称：
+      .v= @site_page.title || 'N/A'
+    .item
+      .k 价格：
+      .v= @site_page.price || 'N/A'
+    .item
+      .k 地理位置：
+      .v= @site_page.location || 'N/A'
+    .item
+      .k 作者：
+      .v= @site_page.author || 'N/A'
+    .item
+      .k 解析方式：
+      .v= @intro || 'N/A'
+
+    .clear
+      %a.do-clear.btn.btn-pill.btn-flat-success{:href => 'javascript:;'} 
+        %span 清除当前网址缓存

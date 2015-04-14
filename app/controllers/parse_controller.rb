@@ -24,7 +24,11 @@ class ParseController < ApplicationController
 
   def show
     @site_page = SitePage.find(params[:id]) if params[:id]
-    
+
+    @intro = '获取基本信息'
+    @data.each_with_index do |item, index|
+      @intro = item['intro'] if item['url'] == @site_page.url
+    end
 
   end
 

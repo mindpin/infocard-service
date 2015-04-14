@@ -1,0 +1,9 @@
+.support-info
+  %h3 supports
+  - @data.each do |item|
+    .support
+      %a{:href => item['site'], :target => '_blank'}= item['name']
+      %br
+      %a{:href => item['md'], :target => '_blank'}= item['md']
+      %br
+      %a{:href => item['url'], :target => '_blank'}= item['url']
