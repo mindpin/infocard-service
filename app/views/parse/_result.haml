@@ -1,4 +1,4 @@
-.result{:style => 'display:block;'}
+.result{:style => ''}
   .image
     %a{:href => @site_page.image_url, :target => '_blank'}
       %img{:src => @site_page.image_url}
@@ -23,5 +23,8 @@
       .v= @intro || 'N/A'
 
     .clear
-      %a.do-clear.btn.btn-pill.btn-flat-success{:href => 'javascript:;'} 
+
+      %a.do-clear.btn.btn-pill.btn-flat-success{:href => "/parse/#{@site_page.id}", data: { method: 'delete', confirm: "确定清除?"} }
         %span 清除当前网址缓存
+
+      =#link_to "清除当前网址缓存", "/parse/#{@site_page.id}", :method => :delete, data: { confirm: "确定清除?", :class=>"do-clear btn btn-pill btn-flat-success" }

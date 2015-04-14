@@ -33,4 +33,17 @@ class ParseController < ApplicationController
   end
 
 
+  def destroy
+    p 'hihihihih'
+    site_page = SitePage.find(params[:id])
+    p site_page
+
+    if site_page
+      site_page.destroy
+    end
+
+    redirect_to "/parse"
+  end
+
+
 end
