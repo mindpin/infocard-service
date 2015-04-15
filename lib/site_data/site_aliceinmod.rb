@@ -8,6 +8,7 @@ class SiteAliceinmod
         h.first['src']
       end
       price 'span[@id="price1"]'
+      from {"AliceInMod"}
     end
 
   end

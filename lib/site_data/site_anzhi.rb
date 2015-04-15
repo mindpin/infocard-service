@@ -16,6 +16,7 @@ class SiteAnzhi
         h.last.text.strip.gsub('作者：', '')
       end
 
+      from {"安智市场"}
     end
 
   end

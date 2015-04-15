@@ -10,6 +10,7 @@ class SiteAppchina
 
       author 'p[@class="art-content"] b'
 
+      from {"应用汇"}
     end
 
   end

@@ -17,6 +17,7 @@ class SitePage
   field :price,        type: String
   field :location,        type: String
   field :author,        type: String
+  field :from,          type: String
 
   # 标识为当前这条记录是用于 seo, 还是用于 price, image_url 的获取
   field :status,        type: String
@@ -44,6 +45,7 @@ class SitePage
       :price => parser.price,
       :location => parser.location,
       :author => parser.author,
+      :from   => parser.from,
       :status => SitePage::Status::PARSED
     )
     
@@ -85,6 +87,7 @@ class SitePage
           desc: self.desc,
           price: self.price,
           location: self.location,
+          from: self.from,
           author: self.author
         }
       }

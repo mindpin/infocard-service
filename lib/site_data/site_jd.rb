@@ -16,6 +16,9 @@ class SiteJd
         page = mechanize.get(price_url)
         JSON.parse(page.body.gsub(/cnp\((.*)\);/,"\\1"))[0]["p"]
       end
+      from do
+        "京东"
+      end
     end
 
   end

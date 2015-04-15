@@ -1,6 +1,6 @@
 class SitePageParser
 
-  attr_accessor :url, :hostname, :homepage, :image_url, :title, :desc, :price, :location, :author
+  attr_accessor :url, :hostname, :homepage, :image_url, :title, :desc, :price, :location, :author, :from
 
   def initialize(url)
     @url = url
@@ -23,6 +23,7 @@ class SitePageParser
     @price = data[:price]
     @location = data[:location]
     @author = data[:author]
+    @from   = data[:from]
 
   end
 

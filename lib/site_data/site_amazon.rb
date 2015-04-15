@@ -8,6 +8,7 @@ class SiteAmazon
         h.first['data-old-hires']
       end
       price 'span[@id="priceblock_ourprice"]'
+      from {"亚马逊（中国）"}
     end
 
   end
