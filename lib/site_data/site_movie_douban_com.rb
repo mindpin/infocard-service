@@ -26,6 +26,8 @@ class SiteMovieDoubanCom
       location do |h|
         data['attrs']['country'][0]
       end
+
+      from {'豆瓣电影'}
     end
 
   end

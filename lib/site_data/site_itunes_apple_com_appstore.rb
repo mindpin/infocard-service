@@ -10,6 +10,8 @@ class SiteItunesAppleComAppstore
       price 'div[@class="price"]'
 
       author 'span[@itemprop="name"]'
+
+      from {'App Store（中国）'}
     end
 
   end

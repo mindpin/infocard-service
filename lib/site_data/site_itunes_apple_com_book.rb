@@ -12,6 +12,8 @@ class SiteItunesAppleComBook
       author 'div[@id="title"] h2' do |h|
         h.text.strip.gsub('By', '').strip
       end
+
+      from {'iTunes Store - 图书（中国）'}
     end
 
   end

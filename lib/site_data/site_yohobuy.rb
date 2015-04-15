@@ -10,6 +10,8 @@ class SiteYohobuy
       price do |b|
         b.text.match(/custom\['price'\] = (.*);/)[1]
       end
+
+      from {'YOHO!有货'}
     end
 
   end

@@ -8,6 +8,8 @@ class SiteNop
         h.first['src']
       end
       price 'span[@class="pdpricecur"] span'
+
+      from {'NOP'}
     end
 
   end

@@ -23,6 +23,8 @@ class SiteTmall
         page = mechanize.get(price_url, parameters = [], referer = url )
         parse_price_by_reg(page.body)
       end
+
+      from {'天猫'}
     end
 
   end

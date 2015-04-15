@@ -8,6 +8,8 @@ class SiteKnewone
         h.first['src']
       end
       price 'div[@id="price"]'
+
+      from {'KnewOne'}
     end
 
   end

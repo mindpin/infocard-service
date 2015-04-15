@@ -8,6 +8,8 @@ class SiteLancome
         'http://www.lancome.com.cn' + h.first['src']
       end
       price 'span[@id="price"]'
+
+      from {'兰蔻（中国）'}
     end
 
   end

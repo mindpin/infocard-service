@@ -16,6 +16,8 @@ class SiteLifevc
       price 'p[@class="sPrice"] em' do |h|
         h.first.text.strip
       end
+
+      from {'丽芙家居'}
     end
 
   end

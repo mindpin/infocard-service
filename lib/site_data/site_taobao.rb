@@ -19,6 +19,8 @@ class SiteTaobao
         page = mechanize.get(price_url, parameters = [], referer = url )
         parse_price_by_reg(page.body)
       end
+
+      from {'淘宝'}
     end
 
   end

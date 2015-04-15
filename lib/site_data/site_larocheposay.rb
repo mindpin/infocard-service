@@ -8,6 +8,8 @@ class SiteLarocheposay
         h.first['src']
       end
       price 'div[@class="add-to-cart-price"] span[@class="price"]'
+
+      from {'理肤泉'}
     end
 
   end

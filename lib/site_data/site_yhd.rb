@@ -16,6 +16,8 @@ class SiteYhd
         page = mechanize.get(price_url)
         JSON.parse(page.body.gsub(/jsonp\((.*)\)/,"\\1"))["currentPrice"]
       end
+
+      from {'一号店'}
     end
 
   end

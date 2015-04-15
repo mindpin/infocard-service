@@ -9,6 +9,8 @@ class SiteReadDoubanCom
       end
       author 'div[@class="people-name"] a'
       price 'span[@class="price-tag "]'
+
+      from {'豆瓣阅读'}
     end
 
   end

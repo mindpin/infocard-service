@@ -8,6 +8,8 @@ class SiteItruelife
         h.first["href"]
       end
       price 'ins[@class="ff_arial"]'
+
+      from {'凡夫'}
     end
 
   end

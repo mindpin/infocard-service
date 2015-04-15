@@ -13,6 +13,8 @@ class SiteUjipin
       price 'div[@class="right"] h3' do |h|
         h.text.gsub('售价：', '').strip
       end
+
+      from {'优集品'}
     end
 
   end

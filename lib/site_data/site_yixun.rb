@@ -8,6 +8,8 @@ class SiteYixun
         h.first['src']
       end
       price 'dl[@class="xbase_item xprice"] span[@class="mod_price xprice_val"]'
+
+      from {'易迅'}
     end
 
   end

@@ -10,6 +10,8 @@ class SiteNewegg
       price 'input[@id="omHiddenPrice"]' do |h|
         h.first["value"]
       end
+
+      from {'新蛋中国'}
     end
 
   end

@@ -8,6 +8,8 @@ class SiteVipShop
         h.first['src']
       end
       price 'span[@class="pbox-price"]'
+
+      from {'唯品会'}
     end
 
   end

@@ -9,6 +9,8 @@ class SiteVip
         h.first['src']
       end
       price 'p[@class="bt_infos_price "]'
+
+      from {'唯品会'}
     end
 
   end

@@ -12,6 +12,8 @@ class SiteMyapp
         h.last.text.strip
       end
 
+      from {'应用宝'}
+
     end
 
   end

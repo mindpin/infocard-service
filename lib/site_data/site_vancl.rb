@@ -8,6 +8,8 @@ class SiteVancl
         h.first['src']
       end
       price 'span[@class="tehuiMoney"] span strong'
+
+      from {'凡客'}
     end
 
   end

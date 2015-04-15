@@ -10,6 +10,8 @@ class SiteImdb
       location 'div[@id="titleDetails"] div[@class="txt-block"]' do |h|
         h[1].text.gsub('Country:', '').strip
       end
+
+      from {'IMDB'}
     end
 
   end

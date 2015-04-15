@@ -10,6 +10,8 @@ class SiteLoccitane
       price 'div[@id="product_price_list"] span[@itemprop="price"]' do |span|
         span.text.strip.gsub("¥","").to_i
       end
+
+      from {'欧舒丹中国'}
     end
 
   end

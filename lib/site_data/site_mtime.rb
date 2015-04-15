@@ -10,6 +10,8 @@ class SiteMtime
       location 'dl[@class="info_l"] dd' do |h|
         h[2].text.gsub('国家地区：', '').strip
       end
+
+      from {'时光网'}
     end
 
   end

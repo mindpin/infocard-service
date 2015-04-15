@@ -12,6 +12,8 @@ class SiteWandoujia
         h.first['content']
       end
 
+      from {'豌豆荚'}
+
     end
 
   end

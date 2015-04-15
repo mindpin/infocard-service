@@ -11,6 +11,8 @@ class SiteMuji
         json = h.first.text.match(/var JSON_DATA=(.*);/)[1]
         JSON.parse(json)["GoodsInfo"]["goods"]["cFirstPrice"]
       end
+
+      from {'无印良品（中国）'}
     end
 
   end

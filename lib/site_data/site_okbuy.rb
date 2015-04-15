@@ -19,6 +19,8 @@ class SiteOkbuy
         page = mechanize.get(price_url)
         JSON.parse(page.body)["salepr"]
       end
+
+      from {'好乐买'}
     end
 
   end

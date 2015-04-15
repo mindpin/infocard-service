@@ -8,6 +8,8 @@ class SiteQuwan
         h.first['src']
       end
       price 'dt[@id="price_goods_div"] strong'
+
+      from {'趣玩'}
     end
 
   end

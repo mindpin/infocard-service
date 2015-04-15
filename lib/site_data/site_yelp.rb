@@ -9,6 +9,8 @@ class SiteYelp
       end
       price 'span[@itemprop="priceRange"]'
       location 'li[@class="address"]'
+
+      from {'Yelp'}
     end
 
   end

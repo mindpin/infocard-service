@@ -14,6 +14,8 @@ class SiteWwwDoubanCom
       price 'div[@class="app_info"] span[@class="attr-value"]' do |h|
         h.last.text.strip
       end
+
+      from {'豆瓣移动应用'}
     end
 
   end
