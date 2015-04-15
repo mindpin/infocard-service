@@ -15,6 +15,9 @@ class SiteDianping
       location 'div[@class="expand-info address"] span' do |h|
         h.last.text.strip
       end
+
+      from {'大众点评'}
+
     end
 
   end

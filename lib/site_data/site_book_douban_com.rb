@@ -34,6 +34,8 @@ class SiteBookDoubanCom
         data['price']
       end
 
+      from {'豆瓣读书'}
+
 
     end
 

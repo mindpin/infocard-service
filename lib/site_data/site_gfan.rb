@@ -12,6 +12,8 @@ class SiteGfan
         h[1].text.strip.gsub('开 发 者：', '')
       end
 
+      from {'机锋市场'}
+
     end
 
   end

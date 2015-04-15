@@ -11,6 +11,8 @@ class SiteEbay
       end
       price 'span[@id="prcIsum"]'
       location 'div[@class="iti-eu-bld-gry "]'
+
+      from {'ebay'}
     end
 
   end

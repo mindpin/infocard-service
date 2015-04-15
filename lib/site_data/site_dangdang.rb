@@ -10,6 +10,8 @@ class SiteDangdang
         h.first['src']
       end
       price 'span[@id="salePriceTag"]'
+
+      from {'当当'}
     end
 
   end

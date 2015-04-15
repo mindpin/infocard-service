@@ -10,6 +10,8 @@ class SiteHiapk
 
       author 'span[@class="d_u_line"]'
 
+      from {'安卓市场'}
+
     end
 
   end

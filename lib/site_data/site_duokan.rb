@@ -9,6 +9,8 @@ class SiteDuokan
       end
       author 'td[@class="author"] a'
       price 'div[@class="price"] em'
+
+      from {'多看阅读'}
     end
 
   end

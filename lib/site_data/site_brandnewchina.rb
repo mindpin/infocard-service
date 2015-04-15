@@ -8,6 +8,8 @@ class SiteBrandnewchina
         h.first['src']
       end
       price 'span[@class="originalprice"]'
+
+      from {'薄荷糯米葱'}
     end
 
   end

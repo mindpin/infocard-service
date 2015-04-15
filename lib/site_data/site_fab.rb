@@ -8,6 +8,8 @@ class SiteFab
         h.first['src']
       end
       price 'span[@itemprop="price"]'
+
+      from {'Fab'}
     end
 
   end

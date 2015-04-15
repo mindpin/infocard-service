@@ -8,6 +8,8 @@ class SiteIkea
         URI.parse(url).host + "/" + h.first['src']
       end
       price 'span[@id="price1"]'
+
+      from {'宜家'}
     end
 
   end

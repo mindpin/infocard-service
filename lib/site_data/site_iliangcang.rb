@@ -8,6 +8,8 @@ class SiteIliangcang
         h.first['src']
       end
       price 'span[@id="goodsPrice"]'
+
+      from {'良仓'}
     end
 
   end

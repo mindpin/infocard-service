@@ -10,6 +10,8 @@ class SiteGome
       price 'script' do |h|
         h.to_s.split('price:"')[1].split('",')[0]
       end
+
+      from {'国美'}
     end
 
   end
