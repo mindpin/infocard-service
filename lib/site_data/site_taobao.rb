@@ -5,7 +5,7 @@ class SiteTaobao
     fetch(url) do
       title 'h3[@class="tb-main-title"]'
       image_url  'script' do |h|
-        h.to_s.split('auctionImages:[')[1].split(',')[0].gsub('"', '').strip
+        h.to_s.split('auctionImages:[')[1].split(',')[0].gsub('"', '').gsub(' ]', '').strip
       end
 
       price do |h|

@@ -5,7 +5,7 @@ class SiteIkea
     fetch(url) do
       title 'div[@id="name"]'
       image_url 'img[@id="productImg"]' do |h|
-        URI.parse(url).host + "/" + h.first['src']
+        'http://' + URI.parse(url).host + "/" + h.first['src']
       end
       price 'span[@id="price1"]'
 
