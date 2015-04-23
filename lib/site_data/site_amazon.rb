@@ -9,7 +9,13 @@ class SiteAmazon
       # end
 
       image_url 'script' do |h|
-        h.to_s.split('"large":"')[1].split('",')[0]
+        str = h.to_s
+        items = str.scan('"large":"')
+        if items.length > 0
+          a = str.split('"large":"')[1].split('",')[0]
+        else
+          str.split('"L" : "')[1].split('",')[0]
+        end
       end
 
       price 'span[@id="priceblock_ourprice"]'
