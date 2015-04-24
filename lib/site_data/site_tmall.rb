@@ -31,7 +31,11 @@ class SiteTmall
 
   # 正则解析 json 字符串中的 price
   def self.parse_price_by_reg(str)
-    str.scan(/\"price\"\:\"([^,]*)\",/).flatten.map{|p|p.to_f}.min
+    # str.scan(/\"price\"\:\"([^,]*)\",/).flatten.map{|p|p.to_f}.min
+    items = str.scan('"price":"')
+    if items.length > 0
+      str.split('"price":"')[1].split('",')[0]
+    end
   end
 
   # json 库解析这个json 总是抛异常，先用正则方案
