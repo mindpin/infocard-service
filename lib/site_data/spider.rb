@@ -23,7 +23,9 @@ module Spider
     end
 
     def format_str(item, str_type)
-      return @callback.call(item) unless @callback.nil?
+      unless @callback.nil?
+        return @callback.call(item) unless item.empty?
+      end
 
       case str_type
       when :inner_html

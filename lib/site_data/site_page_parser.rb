@@ -4,8 +4,17 @@ class SitePageParser
 
   def initialize(url)
     @url = url
-    # url = url.split('#').first
-    # url = url.gsub('|', '')
+
+    res = Net::HTTP.get_response(URI(url.split('#')[0]))
+    unless res['location'] and res['location'].include? 'http://jump.taobao.com/jump'
+      url = res['location'].nil?? url : res['location']
+    end
+
+    p res['location']
+    p '-----'
+    p url
+    p '====='
+
     @hostname = URI.parse(URI.encode(url)).host
     @homepage = get_homepage(url)
     

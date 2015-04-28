@@ -12,7 +12,7 @@ class ParseController < ApplicationController
   end
 
   def create
-    site_page = SitePage.parse_url(params[:url])
+    site_page = SitePage.parse_url(params[:url].strip)
     if site_page.title.nil?
       flash[:error] = '无法解析'
     end
@@ -34,7 +34,6 @@ class ParseController < ApplicationController
 
 
   def destroy
-    p 'hihihihih'
     site_page = SitePage.find(params[:id])
     p site_page
 
