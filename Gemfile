@@ -61,9 +61,6 @@ group :development, :test do
 end
 
 
-group :production do
-  gem 'rails_stdout_logging'
-end
 
 gem "unicorn", group: :production
 gem "mina",
