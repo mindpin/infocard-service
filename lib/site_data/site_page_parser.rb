@@ -5,6 +5,10 @@ class SitePageParser
   def initialize(url)
     @url = url
 
+    # 判断一号店
+    url = url.split('?')[0] if url.match(/http:\/\/item.yhd.com/)
+
+    # 判断淘宝 tmall 跳转
     res = Net::HTTP.get_response(URI(url.split('#')[0]))
     unless res['location'] and res['location'].include? 'http://jump.taobao.com/jump'
       url = res['location'].nil?? url : res['location']
