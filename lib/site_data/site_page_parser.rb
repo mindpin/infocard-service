@@ -3,7 +3,7 @@ class SitePageParser
   attr_accessor :url, :hostname, :homepage, :image_url, :title, :desc, :price, :location, :author, :from
 
   def initialize(url)
-    @url = url
+    @url = url = (url[0..6] == 'http://')? url : 'http://' + url
 
     # 判断一号店
     url = url.split('?')[0] if url.match(/http:\/\/item.yhd.com/)
@@ -14,15 +14,18 @@ class SitePageParser
       url = res['location'].nil?? url : res['location']
     end
 
-    p res['location']
-    p '-----'
-    p url
-    p '====='
+    # p res['location']
+    # p '-----'
+    # p url
+    # p '====='
 
     @hostname = URI.parse(URI.encode(url)).host
     @homepage = get_homepage(url)
     
     name = get_name
+
+    # p name
+    # p '-----9999-----'
     # return unless name
     data = eval "Site#{name}.parse(url)"
     
@@ -56,7 +59,7 @@ class SitePageParser
 
     hostname = @hostname.gsub('.', '_')
     if File.file?("#{Rails.root.to_s}/lib/site_data/site_#{hostname}.rb")
-       return hostname.split('_').map { |item| item.capitalize }.join
+      return hostname.split('_').map { |item| item.capitalize }.join
     end
 
     name = @hostname.gsub('.com', '').gsub('.cn', '').split('.').last
