@@ -22,7 +22,7 @@ class SitePageParser
     @hostname = uri.host
     # 如果是淘宝手机版的页面
     # 就访问这个 item_id 的PC版本的页面
-    if @hostname == "h5.m.taobao.com"
+    if @hostname == "h5.m.taobao.com" || @hostname == "m.intl.taobao.com"
       @hostname = "item.taobao.com"
       taobao_item_id = uri.query.split("&").select{|str|str.match(/^id=/)}.first.gsub("id=","")
       @url = url = "http://item.taobao.com/item.htm?id=#{taobao_item_id}"
