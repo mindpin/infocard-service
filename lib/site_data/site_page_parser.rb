@@ -18,8 +18,16 @@ class SitePageParser
     # p '-----'
     # p url
     # p '====='
+    uri = URI.parse(URI.encode(url))
+    @hostname = uri.host
+    # 如果是淘宝手机版的页面
+    # 就访问这个 item_id 的PC版本的页面
+    if @hostname == "h5.m.taobao.com"
+      @hostname = "item.taobao.com"
+      taobao_item_id = uri.query.split("&").select{|str|str.match(/^id=/)}.first.gsub("id=","")
+      @url = url = "http://item.taobao.com/item.htm?id=#{taobao_item_id}"
+    end
 
-    @hostname = URI.parse(URI.encode(url)).host
     @homepage = get_homepage(url)
     
     name = get_name
